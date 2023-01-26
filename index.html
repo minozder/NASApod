@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Picture of the day</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov">
+
+</head>
+<body>
+    <!----Loader--->
+    <div class="loader hidden">
+        <img src="rocket.svg" alt="Loading animation">
+    </div>
+    <div class="container">
+        <!---Navigation---->
+        <div class="navigation-container">
+            <span class="background"></span>
+            <!--Results-->
+            <span class="navigation-items" id="resultsNav">
+                <h3 class="clickable" onclick="updateDOM('favorites')">Favorites</h3>
+                <h3>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
+                <h3 class="clickable" onclick="getNasaPictures()">Load more</h3>
+            </span>
+            <!--Favorites Nav--------->
+            <span class="navigation-items hidden" id="favoritesNav">
+                <h3 class="clickable" onclick="getNasaPictures()">Load more NASA images</h3>
+            </span>
+        </div>
+        <!---Images Container----------->
+        <div class="images-container"></div>
+    </div>
+    <!---Save confirmation--->
+    <div class="save-confirmed" hidden>
+        <h1>ADDED!</h1>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
